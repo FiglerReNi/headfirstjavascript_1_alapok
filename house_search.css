@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 15px;
+}
+
+#row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+
+}
+
+#center{
+    margin-left: 20%;
+}
+
+#kep {
+    border: cadetblue solid 2px;
+}

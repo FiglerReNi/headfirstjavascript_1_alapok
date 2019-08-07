@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>House Finder</title>
+    <link rel="stylesheet" href="house_search.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="text/javascript" src="house_search.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Ready to find a new house?</h1>
+    <br>
+    <fieldset class="border border-dark p-4">
+        <div id="row">
+            <div class="column">
+                <img id="kep" src="letöltés.jpg" height="170" width="170"/>
+            </div>
+            <div class="column">
+                <form action="house_search.php" method="post">
+                    <div class='row'>
+                        <label class="col-6 col-sm-6">Enter your annual income: </label>
+                        <input class="col-4 col-sm-4" type="text" name="income" id="income" required onblur="check(this.value)"/>
+                        <div class='w-100'></div>
+                        <label class="col-6 col-sm-6">Enter the number of bedrooms:</label>
+                        <input class="col-4 col-sm-4" type="text" name="bedroom" id="bedroom" required onblur="check(this.value)"/>
+                        <div class='w-100'></div>
+                        <label class="col-6 col-sm-6">Enter your ZIP code:</label>
+                        <input class="col-4 col-sm-4" type="text" name="zip" id="zip" maxlength="4" required onblur="check(this.value)"/>
+                    </div>
+                    </br>
+                    <div id="center">
+                        <input class="btn btn-info" type="button" id="calculate" value="Calculate Price"
+                               onclick="calculatePrice()"/>
+                        <button class="btn btn-info" name="shop">Shop for houses</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </fieldset>
+</div>
+</body>
+</html>
